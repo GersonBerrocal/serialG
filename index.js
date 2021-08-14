@@ -12,6 +12,9 @@ apiMovies(app)
 
 app.use(notFoundHandler)
 
+app.use((err, req, res, next) => {
+  res.json(err)
+})
 app.listen(3000, () => {
   console.log('app corriendo en el puerto 3000')
 })

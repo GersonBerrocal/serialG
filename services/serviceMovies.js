@@ -1,4 +1,3 @@
-// const { moviesMock   listMoviesMock  } = require('../util/mock/movies')
 const MongoLib = require('../libs/mongo')
 
 class ServiceMovies {

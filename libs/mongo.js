@@ -34,9 +34,12 @@ class MongoLib {
     })
   }
 
-  getOne(collection, id) {
+  getOne(collection, id, query = null) {
+    let q
+    if (query) q = query
+    else q = { _id: ObjectId(id) }
     return this.connect().then((db) => {
-      return db.collection(collection).findOne({ _id: ObjectId(id) })
+      return db.collection(collection).findOne(q)
     })
   }
 

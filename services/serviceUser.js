@@ -21,6 +21,10 @@ class ServiceUser {
   todos() {
     return this.mongoDB.getAll(this.collection)
   }
+
+  updateUser(userId, data) {
+    return this.mongoDB.update(this.collection, userId, data)
+  }
 }
 
 module.exports = ServiceUser

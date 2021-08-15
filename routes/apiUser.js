@@ -7,7 +7,7 @@ const verifyTokenRequest = require('../util/middleware/verifyTokenRequest')
 const validateHandler = require('../util/middleware/validateHandler')
 const {
   createUserSchema,
-  // updateUserSchema,
+  updateUserSchema,
   idUserSchema,
 } = require('../util/schema/user')
 
@@ -61,6 +61,17 @@ function apiUser(app) {
     const user = await serviceUser.getUser(userName)
     res.json(user)
   })
+
+  router.put(
+    '/:userId',
+    validateHandler(updateUserSchema),
+    async function (req, res) {
+      const userId = req.params.userId
+      const data = req.body
+      const id = await serviceUser.updateUser(userId, data)
+      res.json(id)
+    }
+  )
 }
 
 module.exports = apiUser

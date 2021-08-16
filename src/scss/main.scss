@@ -1,0 +1,17 @@
+@import '_reset';
+
+@import 'fonts';
+
+.contenedor {
+  font-family: 'Work Sans', 'sans-serif';
+  position: relative;
+  min-height: 100vh;
+}
+@import 'components/menu';
+@import 'components/button';
+@import 'components/movie';
+@import 'components/layout';
+@import 'components/landing';
+@import 'components/plan';
+@import 'components/directorio';
+@import 'components/reproductor';

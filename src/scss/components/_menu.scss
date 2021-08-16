@@ -1,0 +1,32 @@
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  color: white;
+  &-opciones {
+    display: flex;
+    a {
+      display: inline-block;
+      margin-right: 1em;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  &-link {
+    cursor: pointer;
+  }
+  &-user {
+    display: none;
+    // display: flex;
+    align-items: center;
+    > * {
+      margin-left: 1em;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}

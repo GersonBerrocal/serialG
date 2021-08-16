@@ -1,0 +1,52 @@
+.planes {
+}
+.plan {
+  margin-top: 2em;
+  display: flex;
+  grid-column-gap: 2em;
+  justify-content: center;
+  &-condiciones {
+    margin-top: 2em;
+    font-size: 0.9em;
+    list-style-position: inside;
+  }
+  &-card {
+    box-shadow: 0 0 10px 3px rgba(180, 180, 180, 0.733);
+    border-radius: 15px;
+    padding: 2em 1em;
+    min-width: 280px;
+    max-width: 320px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    & > div:first-of-type {
+      flex: 1;
+    }
+    & > div:last-of-type {
+      margin-top: 1em;
+      text-align: center;
+    }
+    &-btn {
+      margin-top: 1em;
+    }
+    &-nombre,
+    &-precio {
+      text-align: center;
+    }
+    &-nombre {
+      font-size: 1.4em;
+      font-weight: 400;
+    }
+    &-precio {
+      font-size: 2em;
+      font-weight: 700;
+      margin-bottom: 1.2em;
+    }
+    &-lista {
+      list-style-position: inside;
+    }
+    &-item {
+      margin-bottom: 0.5em;
+    }
+  }
+}

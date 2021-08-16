@@ -1,0 +1,22 @@
+body.reproductor-isActive {
+  overflow: hidden;
+}
+.reproductor {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: black;
+  color: white;
+  height: 100%;
+  z-index: 100;
+  overflow: hidden;
+  display: none;
+  &-opciones {
+    display: flex;
+    justify-content: end;
+  }
+  &-video {
+    text-align: center;
+  }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/main.css" />
+    <title>Movie</title>
+  </head>
+  <body class="">
+    <div class="contenedor contenedor-movie">
+      <div class="menu wrapper">
+        <div class="menu-opciones">
+          <a href="/" class="menu-link">Inicio</a>
+          <a href="/pages/directorio.html" class="menu-link">Directorio</a>
+        </div>
+        <div class="menu-user">
+          <span>NameUser</span>
+          <img class="menu-user-img" src="/img/icon-user.svg" alt="" />
+        </div>
+        <div class="menu-login">
+          <a href="#">Sing up</a>
+          <a href="#">Login</a>
+        </div>
+      </div>
+      <main class="moviePresentation wrapper">
+        <header class="movieP">
+          <div class="movieP-img">
+            <img src="/img/monster.jpg" alt="" />
+          </div>
+          <div class="movieP-info">
+            <div class="movieP-info-tabla">
+              <p>Titulo</p>
+              <p class="movieP-titulo">Monster</p>
+              <p>Generos</p>
+              <p class="movieP-generos">Psicologico, Misterio</p>
+              <p>Tiempo</p>
+              <p class="movieP-tiempo">24 minutos por capitulo(aprox.)</p>
+              <p>vistas</p>
+              <p class="movieP-vistas">3000</p>
+            </div>
+          </div>
+        </header>
+        <section class="movieP-content wrapper">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+            assumenda amet quis maxime, deleniti aut iure molestias accusantium
+            natus, tempora totam magnam? Iusto voluptatum minus molestiae
+            mollitia dolore deserunt quod. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Voluptate corrupti amet quod
+            asperiores nisi reprehenderit, repudiandae ipsa soluta! Eligendi
+            asperiores molestias facilis a esse beatae? Excepturi voluptas hic
+            mollitia qui!
+          </p>
+          <a class="movie-favorito" href="#">Añadir a favoritos</a>
+          <div class="contenido-movie">
+            <h4>Contenido</h4>
+            <hr />
+            <ul class="movie-lista">
+              <li class="movie-item">
+                <img src="/img/icon-play.svg" alt="" />
+                <span>Monster capitulo 1 : "el renacer de los muertos"</span>
+              </li>
+              <li class="movie-item">
+                <img src="/img/icon-play.svg" alt="" />
+                <span>Monster capitulo 1 : "el renacer de los muertos"</span>
+              </li>
+              <li class="movie-item">
+                <img src="/img/icon-play.svg" alt="" />
+                <span>Monster capitulo 1 : "el renacer de los muertos"</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div class="reproductor">
+      <div class="reproductor-opciones wrapper">
+        <a href="#" id="reproductor-cerrar">Cerrar</a>
+      </div>
+      <div class="reproductor-video">
+        <video
+          id="reproductor-video"
+          controls
+          src="https://uploads-ssl.webflow.com/5f2e603607387d75cc654ff3/5f2e603607387d7fd56551c5_userfirst-reel-sd-transcode.mp4"
+        ></video>
+      </div>
+    </div>
+    <script type="module" src="/indexMovie.js"></script>
+  </body>
+</html>

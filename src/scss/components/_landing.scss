@@ -1,0 +1,38 @@
+.landing {
+  color: white;
+  height: 100vh;
+  min-height: 700px;
+  position: relative;
+  overflow: hidden;
+  background-image: url(/img/lain.jpg);
+  background-position: bottom right;
+  background-attachment: fixed;
+  background-color: black;
+  background-repeat: no-repeat;
+  .menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  &-cuerpo {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .landing-frase {
+      max-width: 600px;
+      font-size: 1.2em;
+    }
+  }
+  .menu-user-img {
+    filter: invert(1);
+  }
+  &-titulo {
+    font-weight: 700;
+    font-size: 60px;
+    span {
+      font-size: 1.4em;
+    }
+  }
+}

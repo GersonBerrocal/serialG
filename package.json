@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js",
-    "start": "NODE_ENV=production node index.js",
-    "f_start": "webpack serve --open --mode development",
-    "f_build": "webpack --mode production"
+    "start": "NODE_ENV=production node index.js"
   },
   "keywords": [],
   "author": "",

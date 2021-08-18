@@ -9,7 +9,7 @@ const movieCoverSchema = joi.string()
 const movieContentSchema = joi
   .array()
   .items(joi.object({ title: joi.string().max(50), url: joi.string().uri() }))
-const movieDescriptionSchema = joi.string().max(300)
+const movieDescriptionSchema = joi.string().max(500)
 const moviePlanSchema = joi.string().valid('basico', 'estandar', 'premiun')
 
 const createMovieSchema = joi.object({

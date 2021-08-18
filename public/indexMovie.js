@@ -128,4 +128,3 @@ function pedirContenido() {
     });
 }
 pedirContenido();
-//# sourceMappingURL=indexMovie.js.map

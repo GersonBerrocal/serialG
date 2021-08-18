@@ -77,4 +77,3 @@ function obetenerDatos(e) {
     });
 }
 formSing.addEventListener('submit', obetenerDatos);
-//# sourceMappingURL=singup.js.map

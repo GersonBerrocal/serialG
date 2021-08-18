@@ -209,4 +209,3 @@ linkAgregar.addEventListener('click', function () {
     mostrarFormulario();
 });
 cerrarForm.addEventListener('click', cerrarFormulario);
-//# sourceMappingURL=indexAdmin.js.map

@@ -59,4 +59,3 @@ form.addEventListener('submit', function (e) {
         });
     });
 });
-//# sourceMappingURL=login.js.map

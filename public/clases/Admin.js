@@ -21,4 +21,3 @@ var Admin = /** @class */ (function (_super) {
     }
     return Admin;
 }(User));
-//# sourceMappingURL=Admin.js.map

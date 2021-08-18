@@ -72,4 +72,3 @@ function pedirContenido() {
     });
 }
 pedirContenido();
-//# sourceMappingURL=indexDirectorio.js.map

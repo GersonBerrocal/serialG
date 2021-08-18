@@ -121,4 +121,3 @@ btnPremiun.addEventListener('click', function () { return __awaiter(void 0, void
         }
     });
 }); });
-//# sourceMappingURL=app.js.map

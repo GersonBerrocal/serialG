@@ -1,1 +1,0 @@
-{"version":3,"file":"Admin.js","sourceRoot":"","sources":["../../src/clases/Admin.ts"],"names":[],"mappings":";;;;;;;;;;;;;;;AAAA,OAAO,EAAE,IAAI,EAAE,MAAM,WAAW,CAAA;AAEhC;IAAoB,yBAAI;IACtB,eACE,SAAiB,EACjB,IAAY,EACZ,SAAiB,EACjB,KAAa,EACb,IAAY;eAEZ,kBAAM,SAAS,EAAE,IAAI,EAAE,SAAS,EAAE,KAAK,EAAE,IAAI,CAAC;IAChD,CAAC;IACH,YAAC;AAAD,CAAC,AAVD,CAAoB,IAAI,GAUvB"}

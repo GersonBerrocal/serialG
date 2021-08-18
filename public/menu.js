@@ -14,4 +14,3 @@ function menuCerrarUsuario() {
     document.querySelector('.menu-user-name').innerHTML = 'userName';
 }
 export default { setInfoUser: setInfoUser };
-//# sourceMappingURL=menu.js.map

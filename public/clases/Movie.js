@@ -62,4 +62,3 @@ var Movie = /** @class */ (function () {
     return Movie;
 }());
 export { Movie };
-//# sourceMappingURL=Movie.js.map

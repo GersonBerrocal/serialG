@@ -1,0 +1,18 @@
+.formLogin {
+  box-shadow: 0 0 6px 4px rgba(105, 105, 105, 0.637);
+  border-radius: 6px;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 1em;
+  label {
+    display: block;
+    font-size: 18px;
+  }
+  input {
+    margin: 0.6em 0;
+    min-width: 300px;
+  }
+  &-opciones {
+    margin: 0.5em 0;
+  }
+}

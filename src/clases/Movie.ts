@@ -6,7 +6,9 @@ class Movie {
   description: string
   plan: string
   content: {}
+  _id: string
   constructor(
+    _id: string,
     title: string,
     genres: string[],
     time: number,
@@ -22,5 +24,16 @@ class Movie {
     this.description = description
     this.plan = plan
     this.content = content
+    this._id = _id
+  }
+  async obtenerVideo(index) {
+    const token = localStorage.getItem('token')
+    let req = {}
+    if (token)
+      req = { method: 'GET', headers: { authorization: 'Bearer ' + token } }
+    else req = { method: 'GET' }
+    return fetch(`/api/movies/video/${this._id}/${index}`, req)
   }
 }
+
+export { Movie }

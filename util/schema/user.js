@@ -11,6 +11,7 @@ const userGenderSchema = joi.string().valid('F', 'M')
 const userFavoritesSchema = joi
   .array()
   .items(joi.object({ idMovie: userIdSchema }))
+const userPlanSchema = joi.string().valid('basico', 'estandar', 'premiun')
 
 const createUserSchema = joi.object({
   user_name: userUserNameSchema.required(),
@@ -19,7 +20,7 @@ const createUserSchema = joi.object({
   last_name: userLastNameSchema.required(),
   email: userEmailSchema.required(),
   gender: userGenderSchema.required(),
-  favorites: userFavoritesSchema,
+  favorites: userFavoritesSchema
 })
 const updateUserSchema = joi.object({
   user_name: userUserNameSchema,
@@ -29,6 +30,7 @@ const updateUserSchema = joi.object({
   email: userEmailSchema,
   gender: userGenderSchema,
   favorites: userFavoritesSchema,
+  plan: userPlanSchema
 })
 
 const idUserSchema = joi.object({ userId: userIdSchema })

@@ -36,9 +36,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 import { User } from './clases/User.js';
 import menu from './menu.js';
-var btnFree = document.getElementById('btn-free');
-var btnEstandar = document.getElementById('btn-estandar');
-var btnPremiun = document.getElementById('btn-premiun');
+var directorio = document.getElementById('directorio');
 User.verificarToken().then(function (result) {
     if (result) {
         var r = result;
@@ -46,79 +44,32 @@ User.verificarToken().then(function (result) {
         menu.setInfoUser(user);
     }
 });
-var token = localStorage.getItem('token');
-if (token) {
-    btnFree.classList.add('btn-disabled');
+// pedir lista de peliculas
+function crearCardMovie(_a) {
+    var cover = _a.cover, _id = _a._id, title = _a.title, genres = _a.genres, time = _a.time, views = _a.views;
+    return "<div class=\"movie\">\n          <div class=\"movie-img\">\n            <a href=\"/movie/" + _id + "\">\n              <img src=\"" + cover + "\" alt=\"portada\" />\n            </a>\n          </div>\n          <div class=\"movie-info\">\n            <div class=\"movie-info-tabla\">\n              <p>Titulo</p>\n              <p class=\"movie-titulo\">" + title + "</p>\n              <p>Generos</p>\n              <p class=\"movie-generos\">" + genres + "</p>\n              <p>Tiempo</p>\n              <p class=\"movie-tiempo\">" + time + " minutos(aprox.)</p>\n              <p>vistas</p>\n              <p class=\"movie-vistas\">" + views + "</p>\n            </div>\n          </div>\n        </div>";
 }
-btnFree.addEventListener('click', function () {
-    if (token)
-        return alert('Ya tienes una cuenta');
-    location.href = '/pages/singUp.html';
-});
-function actualizarPlan(plan) {
+function pedirContenido() {
     return __awaiter(this, void 0, void 0, function () {
-        var bod, resp;
+        var contenidoResponse, contenido, contenidoHtml;
         return __generator(this, function (_a) {
             switch (_a.label) {
-                case 0:
-                    bod = { plan: plan };
-                    return [4 /*yield*/, fetch('/user/', {
-                            method: 'PUT',
-                            body: JSON.stringify(bod),
-                            headers: {
-                                'Content-Type': 'application/json',
-                                authorization: "Bearer " + token
-                            }
-                        })];
+                case 0: return [4 /*yield*/, fetch('/api/movies', { method: 'GET' })];
                 case 1:
-                    resp = _a.sent();
-                    return [2 /*return*/, resp];
+                    contenidoResponse = _a.sent();
+                    return [4 /*yield*/, contenidoResponse.json()];
+                case 2:
+                    contenido = _a.sent();
+                    contenidoHtml = '';
+                    contenido.forEach(function (element) {
+                        console.log(element);
+                        contenidoHtml += crearCardMovie(element);
+                    });
+                    directorio.innerHTML = contenidoHtml;
+                    return [2 /*return*/];
             }
         });
     });
 }
-btnEstandar.addEventListener('click', function () { return __awaiter(void 0, void 0, void 0, function () {
-    var resp, res;
-    return __generator(this, function (_a) {
-        switch (_a.label) {
-            case 0:
-                if (!token)
-                    return [2 /*return*/, alert('Debes iniciar sesion')];
-                return [4 /*yield*/, actualizarPlan('estandar')];
-            case 1:
-                resp = _a.sent();
-                return [4 /*yield*/, resp.json()];
-            case 2:
-                res = _a.sent();
-                localStorage.setItem('token', res.token);
-                if (resp.status == 200)
-                    return [2 /*return*/, alert('Bienvenido al plan estandar')];
-                else
-                    return [2 /*return*/, alert('Lo siento, ocurrio un error, recarge la pagina')];
-                return [2 /*return*/];
-        }
-    });
-}); });
-btnPremiun.addEventListener('click', function () { return __awaiter(void 0, void 0, void 0, function () {
-    var resp, res;
-    return __generator(this, function (_a) {
-        switch (_a.label) {
-            case 0:
-                if (!token)
-                    return [2 /*return*/, alert('Debes iniciar sesion')];
-                return [4 /*yield*/, actualizarPlan('premiun')];
-            case 1:
-                resp = _a.sent();
-                return [4 /*yield*/, resp.json()];
-            case 2:
-                res = _a.sent();
-                localStorage.setItem('token', res.token);
-                if (resp.status == 200)
-                    return [2 /*return*/, alert('Bienvenido al plan premiun')];
-                else
-                    return [2 /*return*/, alert('Lo siento, ocurrio un error, recarge la pagina')];
-                return [2 /*return*/];
-        }
-    });
-}); });
-//# sourceMappingURL=app.js.map
+pedirContenido();
+//# sourceMappingURL=indexDirectorio.js.map

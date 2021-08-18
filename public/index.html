@@ -13,15 +13,16 @@
         <div class="menu wrapper">
           <div class="menu-opciones">
             <a href="/" class="menu-link">Inicio</a>
-            <a href="/pages/directorio.html" class="menu-link">Directorio</a>
+            <a href="/directorio" class="menu-link">Directorio</a>
           </div>
           <div class="menu-user">
-            <span>NameUser</span>
+            <span class="menu-user-name">NameUser</span>
             <img class="menu-user-img" src="/img/icon-user.svg" alt="" />
+            <div class="menu-user-cerrar">Cerrar sesion</div>
           </div>
           <div class="menu-login">
-            <a href="#">Sing up</a>
-            <a href="#">Login</a>
+            <a href="/pages/singUp.html">Sing up</a>
+            <a href="/pages/login.html">Login</a>
           </div>
         </div>
         <div class="landing-cuerpo wrapper">
@@ -65,7 +66,7 @@
               </ol>
             </div>
             <div>
-              <button class="btn btn-disabled" disabled>Registrarse</button>
+              <button class="btn" id="btn-free">Registrarse</button>
             </div>
           </div>
           <div class="plan-card">
@@ -81,7 +82,7 @@
               </ul>
             </div>
             <div>
-              <button class="btn">Contratar plan</button>
+              <button class="btn" id="btn-estandar">Contratar plan</button>
             </div>
           </div>
           <div class="plan-card">
@@ -101,13 +102,13 @@
               </ul>
             </div>
             <div class="plan-card-btn">
-              <button class="btn">Contratar plan</button>
+              <button class="btn" id="btn-premiun">Contratar plan</button>
             </div>
           </div>
         </div>
       </section>
       <footer class="footer"></footer>
     </div>
-    <script src="/app.js"></script>
+    <script type="module" src="/app.js"></script>
   </body>
 </html>

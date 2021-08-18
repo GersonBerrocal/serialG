@@ -1,5 +1,8 @@
 body.reproductor-isActive {
   overflow: hidden;
+  .reproductor {
+    display: block;
+  }
 }
 .reproductor {
   position: absolute;
@@ -10,8 +13,9 @@ body.reproductor-isActive {
   color: white;
   height: 100%;
   z-index: 100;
-  overflow: hidden;
+  overflow: scroll;
   display: none;
+
   &-opciones {
     display: flex;
     justify-content: end;
@@ -19,4 +23,9 @@ body.reproductor-isActive {
   &-video {
     text-align: center;
   }
+}
+
+#reproductor {
+  width: 1000px;
+  height: 588px;
 }

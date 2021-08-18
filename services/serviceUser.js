@@ -10,8 +10,9 @@ class ServiceUser {
     return this.mongoDB.create(this.collection, user)
   }
 
-  getUser(userName) {
-    return this.mongoDB.getOne(this.collection, null, { user_name: userName })
+  getUser(userName, userId = null) {
+    const req = userName ? { user_name: userName } : null
+    return this.mongoDB.getOne(this.collection, userId, req)
   }
 
   deleteUser(userId) {

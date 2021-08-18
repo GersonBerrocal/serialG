@@ -2,3 +2,6 @@
 images/
 node_modules/
 public/*.map
+public/img/*.jpg
+public/img/*.jpeg
+public/img/*.png

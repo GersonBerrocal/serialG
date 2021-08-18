@@ -22,11 +22,32 @@
     display: none;
     // display: flex;
     align-items: center;
+    &-isActive {
+      display: flex;
+      position: relative;
+      .menu-user-cerrar {
+        display: none;
+      }
+      &:hover {
+        & .menu-user-cerrar {
+          cursor: pointer;
+          display: block;
+          position: absolute;
+          z-index: 10;
+          top: 100%;
+          right: 0;
+          background: rgb(156, 156, 156);
+        }
+      }
+    }
     > * {
       margin-left: 1em;
       &:first-child {
         margin-left: 0;
       }
     }
+  }
+  &-user-isActive + &-login {
+    display: none;
   }
 }

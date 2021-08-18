@@ -18,6 +18,10 @@ class ServiceMovies {
     )
   }
 
+  getContent(idMovie) {
+    return this.mongoDB.getOne(this.collection, idMovie)
+  }
+
   getMovie(idMovie) {
     return this.mongoDB.getOne(this.collection, idMovie)
   }

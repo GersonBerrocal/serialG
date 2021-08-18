@@ -1,4 +1,4 @@
-const verifyToken = require('../utilToken')
+const { verifyToken } = require('../utilToken')
 function verifyTokenRequest(req, res, next) {
   // eslint-disable-next-line dot-notation
   if (req.headers['authorization']) {
@@ -9,10 +9,10 @@ function verifyTokenRequest(req, res, next) {
       req.token = resultToken
       next()
     } catch (err) {
-      next('error')
+      next({ message: 'el token es invalido', status: 400 })
     }
   } else {
-    next('error')
+    next({ message: 'token no encontrado', status: 404 })
   }
 }
 module.exports = verifyTokenRequest

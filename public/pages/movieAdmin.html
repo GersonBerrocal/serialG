@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/main.css" />
+    <title>SerialG | admin</title>
+  </head>
+  <body>
+    <div class="contenedor wrapper">
+      <div class="text-center pelicula-agregar">
+        <a href="#" id="agregar-content">Agregar pelicula</a>
+      </div>
+      <div id="peliculas-lista">
+        <div class="pelicula" data-idMovie="fafasaff">
+          <span>Nombrede la pelicula</span>
+          <span
+            ><img src="/img/icon-editar.svg" alt="" /><img
+              src="/img/icon-eliminar.svg"
+              alt=""
+          /></span>
+        </div>
+      </div>
+      <div id="peliculas-lista">
+        <!-- <div class="pelicula" data-idMovie="fafasaff">
+          <span>Nombrede la pelicula</span>
+          <span
+            ><img src="/img/icon-editar.svg" alt="" /><img
+              src="/img/icon-eliminar.svg"
+              alt=""
+          /></span>
+        </div> -->
+      </div>
+      <div class="contenedor-formulario" id="contenedor-formulario">
+        <form action="#" class="formulario-pelicula" id="formulario-pelicula">
+          <label for="">titulo</label>
+          <input type="text" class="input" id="titulo" />
+          <label for="">Generos (seperados por coma)</label>
+          <input type="text" class="input" id="generos" />
+          <label for="">Cover (imagen)</label>
+          <!-- <input type="text" class="input" id="cover" /> -->
+          <input
+            type="file"
+            id="cover"
+            accept="image/png, image/jpeg, image/jpg"
+          />
+          <label for="">Tiempo</label>
+          <input type="text" class="input" id="tiempo" />
+          <label for="">Descripción (max 300 letras)</label>
+          <textarea id="descripcion" cols="30" rows="6"></textarea>
+          <label for="">Plan </label>
+          <input type="radio" class="input" name="plan" value="basico" />Básico
+          <input
+            type="radio"
+            class="input"
+            name="plan"
+            value="estandar"
+          />Estándar
+          <input
+            type="radio"
+            class="input"
+            name="plan"
+            value="premiun"
+          />Premiun
+          <label for="">Contenido</label>
+          <textarea id="contenido" cols="30" rows="6"></textarea>
+          <!-- <input type="text" id="contenido" /> -->
+          <div class="formulario-opciones">
+            <button class="btn" type="submit">Enviar</button>
+            <button class="btn" type="button" id="cerrarForm">Cancelar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="/indexAdmin.js"></script>
+  </body>
+</html>
